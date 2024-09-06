@@ -1,0 +1,17 @@
+[
+  "AccessToken",
+  "AccessToken",
+  "Authorization",
+  "Authorizer",
+  "Error",
+  "EventEmitter",
+  "Map",
+  "NodeJS.Dict",
+  "Permission",
+  "Principal",
+  "ResourceDescription",
+  "ReType",
+  "ScopeDescription",
+  "Ticket",
+  "URL"
+]

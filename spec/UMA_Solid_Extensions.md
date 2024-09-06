@@ -1,0 +1,2 @@
+# Specification extensions for the UMA Authorization Server 
+This document will define the extensions and shortcuts implemented by the Authorization Server for compatibility with Solid-enabled resource servers and ODRL capable policy evaluation.

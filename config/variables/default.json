@@ -1,0 +1,31 @@
+{
+    "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solidlab/uma/^0.0.0/components/context.jsonld",
+    "comment": "Variables used throughout the other configs. Can be set using the CLI.",
+    "@graph": [
+      {
+        "comment": "Port of the server.",
+        "@id": "urn:uma:variables:port",
+        "@type": "Variable"
+      },
+      {
+        "comment": "Base URL of the server.",
+        "@id": "urn:uma:variables:baseUrl",
+        "@type": "Variable"
+      },
+      {
+        "comment": "Hostname of the server.",
+        "@id": "urn:uma:variables:host",
+        "@type": "Variable"
+      },
+      {
+        "comment": "Path to the directory containing the policy rules.",
+        "@id": "urn:uma:variables:policyDir",
+        "@type": "Variable"
+      },
+      {
+        "comment": "Path to the directory containing the N3 rules.",
+        "@id": "urn:uma:variables:rulesDir",
+        "@type": "Variable"
+      }
+    ]
+  }

@@ -1,0 +1,100 @@
+{
+  "name": "@solidlab/uma",
+  "version": "0.1.0",
+  "description": "UMA interfaces and server implementation.",
+  "keywords": [
+    "uma",
+    "user managed access",
+    "access control",
+    "authorization",
+    "policies",
+    "grants"
+  ],
+  "author": {
+    "name": "Wouter Termont",
+    "email": "wouter.termont@ugent.be",
+    "url": "https://wouter.termont.online/"
+  },
+  "license": "MIT",
+  "repository": "github:SolidLabResearch/user-managed-access",
+  "homepage": "https://github.com/SolidLabResearch/user-managed-access/README.md",
+  "bugs": "https://github.com/SolidLabResearch/user-managed-access/issues",
+  "contributors": [
+    {
+      "name": "Wout Slabbink",
+      "email": "wout.slabbink@ugent.be",
+      "url": "https://pod.woutslabbinck.com/profile/card#me"
+    },
+    {
+      "name": "Wouter Termont",
+      "email": "wouter.termont@ugent.be",
+      "url": "https://wouter.termont.online/"
+    }
+  ],
+  "private": true,
+  "packageManager": "yarn@4.0.2",
+  "engines": {
+    "node": ">=18.18",
+    "yarn": ">=4.0"
+  },
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    ".componentsignore",
+    "dist",
+    "config"
+  ],
+  "scripts": {
+    "build": "yarn build:ts && yarn build:components",
+    "build:ts": "yarn run -T tsc",
+    "build:components": "yarn run -T componentsjs-generator -r sai-uma -s src -c dist/components -i .componentsignore --lenient",
+    "test": "yarn run -T jest --coverage",
+    "start": "yarn run -T ts-node bin/main.ts",
+    "demo": "yarn run -T ts-node bin/demo.ts"
+  },
+  "dependencies": {
+    "@httpland/authorization-parser": "^1.1.0",
+    "@solid/access-token-verifier": "^1.2.0",
+    "@solid/community-server": "^7.0.4",
+    "@solidlab/ucp": "workspace:^",
+    "clone": "^2.1.2",
+    "componentsjs": "5.4.2",
+    "cross-fetch": "^4.0.0",
+    "get-jwks": "^9.0.1",
+    "http-message-signatures": "^1.0.4",
+    "jose": "^4.5.1",
+    "koreografeye": "^0.4.8",
+    "logform": "^2.6.0",
+    "n3": "^1.17.2",
+    "uuid": "^9.0.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/clone": "^2.1.4",
+    "@types/n3": "^1.16.4",
+    "@types/node": "^18.18.11",
+    "@types/uuid": "^8.3.4"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts)$"
+  },
+  "lsd:module": "https://linkedsoftwaredependencies.org/bundles/npm/@solidlab/uma",
+  "lsd:components": "dist/components/components.jsonld",
+  "lsd:contexts": {
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solidlab/uma/^0.0.0/components/context.jsonld": "dist/components/context.jsonld"
+  },
+  "lsd:importPaths": {
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solidlab/uma/^0.0.0/components/": "dist/components/",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solidlab/uma/^0.0.0/config/": "config/",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solidlab/uma/^0.0.0/dist/": "dist/"
+  }
+}
